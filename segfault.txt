@@ -1,0 +1,64 @@
+pymadcad on  draft-pr [!?] via 🐍 v3.10.8 (.venv) via ❄ pyzone
+❯ pytest tests/test_draft.py::test_extrude
+========================== test session starts ==========================
+platform linux -- Python 3.10.8, pytest-7.2.1, pluggy-1.0.0
+rootdir: /home/gws/projects/pymadcad
+collected 3 items
+
+tests/test_draft.py ..Fatal Python error: Segmentation fault
+
+Current thread 0x00007f7ed0e4e740 (most recent call first):
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/moderngl/vertex_array.py", line 223 in render
+  File "/home/gws/projects/pymadcad/madcad/displays.py", line 428 in render
+  File "/home/gws/projects/pymadcad/madcad/rendering.py", line 562 in render
+  File "/home/gws/projects/pymadcad/madcad/rendering.py", line 772 in render
+  File "/home/gws/projects/pymadcad/madcad/rendering.py", line 1056 in render
+  File "/home/gws/projects/pymadcad/madcad/rendering.py", line 1162 in paintGL
+  File "/home/gws/projects/pymadcad/madcad/rendering.py", line 1165 in resizeEvent
+  File "/home/gws/projects/pymadcad/madcad/rendering.py", line 109 in show
+  File "/home/gws/projects/pymadcad/tests/test_draft.py", line 143 in test_extrude
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/_pytest/python.py", line 195 in pytest_pyfunc_call
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/pluggy/_callers.py", line 39 in _multicall
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/pluggy/_manager.py", line 80 in _hookexec
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/pluggy/_hooks.py", line 265 in __call__
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/_pytest/python.py", line 1789 in runtest
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/_pytest/runner.py", line 167 in pytest_runtest_call
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/pluggy/_callers.py", line 39 in _multicall
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/pluggy/_manager.py", line 80 in _hookexec
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/pluggy/_hooks.py", line 265 in __call__
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/_pytest/runner.py", line 260 in <lambda>
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/_pytest/runner.py", line 339 in from_call
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/_pytest/runner.py", line 259 in call_runtest_hook
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/_pytest/runner.py", line 220 in call_and_report
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/_pytest/runner.py", line 131 in runtestprotocol
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/_pytest/runner.py", line 112 in pytest_runtest_protocol
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/pluggy/_callers.py", line 39 in _multicall
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/pluggy/_manager.py", line 80 in _hookexec
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/pluggy/_hooks.py", line 265 in __call__
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/_pytest/main.py", line 349 in pytest_runtestloop
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/pluggy/_callers.py", line 39 in _multicall
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/pluggy/_manager.py", line 80 in _hookexec
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/pluggy/_hooks.py", line 265 in __call__
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/_pytest/main.py", line 324 in _main
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/_pytest/main.py", line 270 in wrap_session
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/_pytest/main.py", line 317 in pytest_cmdline_main
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/pluggy/_callers.py", line 39 in _multicall
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/pluggy/_manager.py", line 80 in _hookexec
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/pluggy/_hooks.py", line 265 in __call__
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/_pytest/config/__init__.py", line 167 in main
+  File "/home/gws/projects/pymadcad/.venv/lib/python3.10/site-packages/_pytest/config/__init__.py", line 190 in console_main
+  File "/home/gws/projects/pymadcad/.venv/bin/pytest", line 8 in <module>
+
+Extension modules: numpy.core._multiarray_umath, numpy.core._multiarray_tests, numpy.linalg._umath_linalg, numpy.fft._pocketfft_internal, numpy.random._common, numpy.random.bit_generator, numpy.random._bounded_integers, numpy.random._mt19937, numpy.random.mtrand, numpy.random._philox, numpy.random._pcg64, numpy.random._sfc64, numpy.random._generator, glm, arrex.dtypes, arrex.list, arrex.numbers, madcad.core, yaml._yaml, moderngl.mgl, PyQt5.QtCore, PyQt5.QtGui, PyQt5.QtWidgets, PIL._imaging, PIL._imagingft, scipy._lib._ccallback_c, scipy.sparse._sparsetools, _csparsetools, scipy.sparse._csparsetools, scipy.sparse.linalg._isolve._iterative, scipy.linalg._fblas, scipy.linalg._flapack, scipy.linalg._cythonized_array_utils, scipy.linalg._flinalg, scipy.linalg._solve_toeplitz, scipy.linalg._matfuncs_sqrtm_triu, scipy.linalg.cython_lapack, scipy.linalg.cython_blas, scipy.linalg._matfuncs_expm, scipy.linalg._decomp_update, scipy.sparse.linalg._dsolve._superlu, scipy.sparse.linalg._eigen.arpack._arpack, scipy.sparse.csgraph._tools, scipy.sparse.csgraph._shortest_path, scipy.sparse.csgraph._traversal, scipy.sparse.csgraph._min_spanning_tree, scipy.sparse.csgraph._flow, scipy.sparse.csgraph._matching, scipy.sparse.csgraph._reordering, scipy.optimize._minpack2, scipy.optimize._group_columns, scipy._lib.messagestream, scipy.optimize._trlib._trlib, numpy.linalg.lapack_lite, scipy.optimize._lbfgsb, _moduleTNC, scipy.optimize._moduleTNC, scipy.optimize._cobyla, scipy.optimize._slsqp, scipy.optimize._minpack, scipy.optimize._lsq.givens_elimination, scipy.optimize._zeros, scipy.optimize.__nnls, scipy.optimize._highs.cython.src._highs_wrapper, scipy.optimize._highs._highs_wrapper, scipy.optimize._highs.cython.src._highs_constants, scipy.optimize._highs._highs_constants, scipy.linalg._interpolative, scipy.optimize._bglu_dense, scipy.optimize._lsap, scipy.spatial._ckdtree, scipy.spatial._qhull, scipy.spatial._voronoi, scipy.spatial._distance_wrap, scipy.spatial._hausdorff, scipy.special._ufuncs_cxx, scipy.special._ufuncs, scipy.special._specfun, scipy.special._comb, scipy.special._ellip_harm_2, scipy.spatial.transform._rotation, scipy.optimize._direct, glcontext.x11 (total: 83)
+fish: Job 1, 'pytest tests/test_draft.py::tes…' terminated by signal SIGSEGV (Address boundary error)
+
+pymadcad on  draft-pr [!?] via 🐍 v3.10.8 (.venv) via ❄ pyzone took 21s
+❯ pytest tests/test_draft.py::test_extrude
+========================== test session starts ==========================
+platform linux -- Python 3.10.8, pytest-7.2.1, pluggy-1.0.0
+rootdir: /home/gws/projects/pymadcad
+collected 3 items
+
+tests/test_draft.py ...                                           [100%]
+
+=========================== 3 passed in 8.31s ===========================
